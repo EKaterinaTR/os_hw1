@@ -14,6 +14,5 @@ for i in range(0, n):
                 argss = ['child',str(random.randint(5, 10))]
                 os.execv('child',argss)
 for i in range(0, n):
-        if child > 0:
-                ret = os.wait()
-                print('«Дочерний процесс с PID {} завершился. Статус завершения {}.»'.format(ret[0],os.WEXITSTATUS(ret[1])))
+        ret = os.wait()
+        print('«Дочерний процесс с PID {} завершился. Статус завершения {}.»'.format(ret[0],os.WEXITSTATUS(ret[1])))
